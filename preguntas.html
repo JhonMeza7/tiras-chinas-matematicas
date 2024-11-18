@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas - Tirachinas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            console.log('Clarity');
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "p0j0i0bi93");
+    </script>
+
+</head>
+<body>
+
+    <!-- Encabezado para mostrar la dificultad del juego -->
+    <div class="head" id="headerDificultad"></div>
+
+    <!-- Contenedor principal para organizar el contenido debajo del encabezado -->
+    <div id="mainContent">
+        <!-- Contenedor de los contadores en la parte superior derecha -->
+        <div id="contadorContainer">
+            <div id="numeroPreguntas">❓ Pregutas 0/10</div>
+            <div id="contadorEstrellas">⭐ Estrellas: 0</div>
+            <div id="contadorStrikes">❌ Errores: 0/3</div>
+        </div>
+        
+        <div id="preguntaContainer"></div>
+        <div id="opcionesContainer"></div>
+        <div id="arcoContainer"></div>
+    </div>
+
+    <!-- Ventana flotante para mostrar el fin del juego o el mensaje final -->
+    <div id="finJuegoModal" class="modal">
+        <div class="modal-content">
+            <h2 id="tituloModal">¡Juego Terminado!</h2>
+            <p id="mensajeModal"></p>
+            <p>⭐ Estrellas recolectadas: <span id="totalEstrellas"></span></p>
+            <button id="cerrarModal">Reiniciar Juego</button>
+            <button id="seleccionarDificultad">Inicio</button>
+        </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

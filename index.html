@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            console.log('Clarity');
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "p0j0i0bi93");
+    </script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="pantallaBienvenida">
+        <h1>MATHHOOT! </h1>
+        <input type="text" id="nombreJugador" placeholder="Ingresa tu nombre" required>
+        <button id="btnInicio">Iniciar Juego</button>
+    </div>
+
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnInicio = document.getElementById('btnInicio');
+            btnInicio.addEventListener('click', () => {
+                const nombre = document.getElementById('nombreJugador').value;
+                if (nombre) {
+                    localStorage.setItem('nombreJugador', nombre);
+                    window.location.href = 'nivel.html';
+                } else {
+                    alert('Por favor, ingresa tu nombre.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
